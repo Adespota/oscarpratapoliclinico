@@ -1,0 +1,84 @@
+/*General*/
+h1 {
+	text-align: center;
+}
+h4 {
+	text-align: center;
+}
+h5{
+	text-align: left;
+}
+caption{
+	text-align: justify;
+}
+table{
+	border: 3px solid black;
+}
+table th{
+	text-align: center;
+}
+.table-bordered .head {
+	  border: 3px solid black !important;
+	}
+/*Stile tabella dati anagrafici*/
+
+
+
+
+/*Tabella Punteggi*/
+.lname{
+	width: 120px;
+	text-align: center;
+}
+.vname{
+	width: 62px;
+	text-align: center;
+}
+td{
+	width: 20px;
+}
+tr{
+	transition: .5s all;
+}
+.nometest{
+	width: 367px;
+}
+.space{
+	width: 75px;
+	text-align: center;
+}
+.spaceTR{
+	margin-top: 0px;
+	width:169px;
+	height: 76px;
+	text-align: center;
+}
+.op{
+	width: 116px;
+}
+.opinput{
+	display: flex;
+	align-content:center;
+	border: 0;
+	gap:13px;
+}
+
+
+
+/*Cella di input*/
+.spaceR{
+	width: 170px;
+	text-align: center;
+}
+.vname:focus{
+	background-color: lightblue;
+}
+.notearea:focus{
+	background-color: lightblue;
+}
+
+
+
+
+
+

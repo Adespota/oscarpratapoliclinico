@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Progetto policlinico</title>
+    <!--CSS personale-->
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!--<input type="text" placeholder="Ricerca..." id="myInput"--> 
+    <div> 
+      <h1 style="margin-bottom:150px;">DIPARTIMENTO DI SCIENZE MEDICHE DI BASE, NEUROSCIENZE 
+        ED ORGANI DI SENSO UNIVERSITA’ DEGLI STUDI DI BARI.<br><br> PROTOCOLLO PER VISITA NEUROPSICOLOGICA </h1>
+    </div>
+    
+    
+        
+
+<!--Tabella dati anagrafici-->
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col-2">
+    </div>
+    <div class="col-8">
+      <table class="table table-sm table-bordered border-dark">
+        <thead>
+          <tr class="head">
+            <th colspan="4">DATI ANAGRAFICI</th>
+          </tr>
+        </thead>
+        <tr>
+          <th class="fw-semibold">COGNOME</th>
+          <td><input type="text" class="spaceR vname" name="lname" ></td>
+          <th class="fw-semibold">SCOLARITA'</th>
+          <td><input list="opzionescolarità" id="scolarità" class="spaceR vname" name="lname"/>
+                <datalist id="opzionescolarità">
+                     <option value="5">
+                     <option value="8">
+                     <option value="13">  
+                     <option value="17">
+                 </datalist>
+          </td><!--scolarità-->
+        </tr>
+        <tr>
+          <th class="fw-semibold">NOME</th>
+          <td><input type="text" class="spaceR vname" name="lname"></td>
+          <th class="fw-semibold">RICHIESTA</th>
+          <td><input type="text" class="spaceR vname" name="lname"></td>
+        </tr>
+        <tr>
+          <th class="fw-semibold">DATA DI NASCITA</th>
+          <td><input type="text" id= datadinascita class="spaceR vname" name="lname"></td>
+          <th class="fw-semibold">DATA DEL TEST</th>
+          <td><input type="text" id="data" class="spaceR vname" name="lname"> <!--data-->
+            <!--Script data esatta.js-->
+            <script src="algoritmo per data corrente.js"></script>
+          </td> 
+        </tr>
+        <tr>
+          <th class="fw-semibold">ETA'</th>
+          <td><input type="text" id="età" class="spaceR vname" name="lname" onclick="etàdelpaziente()">
+
+            <script> 
+            ...
+         </script>
+          
+          
+          </td><!--età-->
+          <th class="fw-semibold">N.TELEFONO</th>
+          <td><input type="text" class="spaceR vname" name="lname"></td>
+        </tr>
+        <tr>
+          <th class="fw-semibold">ESAMINATORE</th>
+          <td><input type="text" class="spaceR vname" name="lname"></td>
+          <th class="fw-semibold">DIAGNOSI ALL'INVIO</th>
+          <td><input type="text" class="spaceR vname" name="lname"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+
+  
+  <br><br><br><br><br><br><br>
+
+
+
+
+  <!--Tabella punteggi-->
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col-2">
+      </div>
+      <div class="col-8">
+        <table class="table table-sm table-bordered border-dark">
+          <thead>
+            <tr class="head">
+              <th colspan="5">PUNTEGGI</th>
+            </tr>
+            <tr class="head">
+              <th></th>
+              <th scope="col">P.G</th>
+              <th scope="col">P.C</th>
+              <th scope="col">P.E</th>
+              <th scope="col">Risultati</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr class="head">
+              <th colspan="1">TEST DI SCREENING</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Mini Mental State Examination</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Frontal Assessment Battery</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">MEMORIA VERBALE</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Memoria di prosa immediata</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Memoria di prosa differita</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Free and Cued Selective Reminding</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Richiamo libero - IFR</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Richiamo libero posticipato - DFR</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Indice di sensibilità al cueing - ISC</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Richiamo totale - ITR</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Richiamo totale posticipato - DTR</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Span di cifre diretto</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Span di cifre inverso</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">MEMORIA VISUO SPAZIALE</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Test di corsi</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">ATTENZIONE E FUNZIONI ESECUTIVE</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Matrici attentive</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Trail making test A</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Trail making test B</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold opinput">Stroop T 
+                           <input type="number" id="t1" class="vname" placeholder="t1" step="0.01" name="lname">
+                           <input type="number" id="t2" class="vname" placeholder="t2" step="0.01" name="lname">
+                           <input type="number" id="t3" class="vname" placeholder="t3" step="0.01" name="lname">                       
+                        <input type="button" class="btn btn-outline-primary btn-sm" onclick= interferenzatempo(),PunteggiocorrettoIT(),punteggioequivalenteIT() value="Risultato"> 
+                           <script src="algoritmi dei test/algoritmo test di stroop IT.js"></script>
+                           <script src="algoritmi dei test/algoritmo per dati di input stroop test.js"></script>
+              </th>
+              <td><input type="text" id="StroopP.GIT" class="space" name="lname"></td>
+              <td><input type="text" id="StroopP.CIT" class="space" name="lname"></td> 
+              <td><input type="text" id="StroopP.EIT" class="space" name="lname"></td>
+              <td rowspan="2" id="risultatostroop"><input type="text" id="StroopP.RIT" class="spaceTR" name="lname"></td> 
+            </tr>
+            <tr>
+              <th class="fw-semibold opinput">Stroop E
+                           <input type="number" id="e1" class="vname" placeholder="e1" name="lname">
+                           <input type="number" id="e2" class="vname" placeholder="e2" name="lname">
+                           <input type="number" id="e3" class="vname" placeholder="e3" name="lname">
+                        <input type="button" class="btn btn-outline-primary btn-sm" onclick= interferenzaerrori(),PunteggiocorrettoIE(),punteggioequivalenteIE(),punteggiorisultato() value="Risultato">
+                          <script src="algoritmi dei test/algoritmo test di stroop IE.js"></script>
+                          <script src="algoritmi dei test/algoritmo test di stroop risultato.js"></script>
+                          <script src="algoritmi dei test/algoritmo per dati di input stroop test.js"></script>
+              </th>
+              <td><input type="text" id="StroopP.GIE"class="space" name="lname"></td>
+              <td><input type="text" id="StroopP.CIE"class="space" name="lname"></td> 
+              <td><input type="text" id="StroopP.EIE"class="space" name="lname"></td> 
+            </tr>
+            <tr class="head">
+              <th colspan="1">LINGUAGGIO</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Fluenza verbale fonemica</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">FUNZIONI PRATTO-GNOSICHE</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Clock drawing test</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Test di prassia costruttiva</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">TONO DELL'UMORE</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">GDS</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">STAI I</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">STAI II</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">COGNIZIONE SOCIALE</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Story based empathy task GS</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">IA</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">CI</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">EA</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">INDICE DI RISERVA COGNITIVA</th> 
+            </tr>
+            <tr>
+              <th class="fw-semibold">CRI - SCUOLA</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">CRI - LAVORO</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">CRI - TEMPO LIBERO</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">CRI - TOTALE</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr class="head">
+              <th colspan="1">AUTONOMIA DELLA VITA QUOTIDIANA</th>
+            </tr>
+            <tr>
+              <th class="fw-semibold">ADL</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">IADL</th>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="space" name="lname"></td>
+              <td><input type="text" class="spaceR" name="lname"></td>
+            </tr>
+          </tbody>
+        </table>
+        <caption>Il punteggio grezzo (P.G.) viene corretto (P.C.) in modo da eliminare l’influenza di alcune variabili socio-biologiche concomitanti (età, scolarità, sesso), i P.C. di ogni singola prova vengono riportati su una scala quasi intervallare (P.E.) ove zero corrisponde ad un punteggio patologico, 4 è superiore od uguale alla mediana del gruppo di controllo, ed 1, 2 e 3 sono intermedi tra 0 e 4. tale procedura consente di confrontare la prestazione del paziente con quella della popolazione normale (stimata inferenzialmente); permette, inoltre, un immediato confronto tra le varie prove al netto delle differenze intrinseche dei singoli test.</caption>
+      </div>
+      <div class="col-2">
+      </div>
+    </div>
+  </div>
+  </div>
+  
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!--Aspetti relazionali-->
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col-4">
+      <table class="table table-sm table-bordered border-dark">
+        <thead> 
+          <tr class="head">
+            <th scope="col">ASPETTI DI RELAZIONE</th>
+            <th scope="col">Normale</th>
+            <th class="op" scope="col">Non normale</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr>
+              <th class="fw-semibold">Consapevolezza</th>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Collaborazione</th>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Concentrazione</th>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            </tr>
+            <tr>
+              <th class="fw-semibold">Postura e gestualità</th>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+              <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            </tr>
+            <tr>
+              <td colspan="3"><textarea class="notearea" name="w3review" rows="6" cols="46" placeholder="Note:"></textarea></td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    <div class="col-4">
+      <!--Aspetti linguistici-->
+      <table class="table table-sm table-bordered border-dark">
+        <tbody>
+          <thead> 
+            <tr class="head">
+              <th scope="col">ASPETTI DI LINGUISTICI</th>
+              <th scope="col">Normale</th>
+              <th class="op" scope="col">Non normale</th>
+            </tr>
+          </thead>
+          <tr>
+            <th class="fw-semibold">Frequenza dell'eloquio</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Comprensione</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Contenuto semantico</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Competenza sintattica</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Competenza sintattica</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Scelta lessicale</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr class="head">
+            <th scope="col"></th>
+            <th scope="col">Assenti</th>
+            <th scope="col">Presenti</th>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Anomie</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Circonlocuzioni</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Ripetizioni</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <td colspan="3"><textarea class="notearea" name="w3review" rows="6" cols="46" placeholder="Note:"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-4">
+      <!--Stato emotivo-->
+      <table class="table table-sm table-bordered border-dark">
+        <tbody>
+          <thead> 
+            <tr class="head">
+              <th scope="col">STATO EMOTIVO</th>
+              <th scope="col">Normale</th>
+              <th class="op" scope="col">Non normale</th>
+            </tr>
+          </thead>
+          <tr>
+            <th class="fw-semibold">Ansioso</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Apatico</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Disinibito</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Distratto</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Depresso</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Euforico</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Preoccupato</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Assonnato</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <th class="fw-semibold">Adeguato</th>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+            <td><input class="form-check-input" type="checkbox" id="flexCheckIndeterminate" class="space" name="lname"></td>
+          </tr>
+          <tr>
+            <td colspan="3"><textarea class="notearea" name="w3review" rows="6" cols="46" placeholder="Note:"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  
+      
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+  
+
+ 
+
+
+       
+
+
+
+       
+         
