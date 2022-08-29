@@ -14,32 +14,32 @@ t3.addEventListener('click', nomefunzionet3);
 // definisce la funzione callback
 function nomefunzionet1(event){
   if (document.getElementById('t1').value == ("")) 
-      document.getElementById('t1').value = ("0.00")  
+      document.getElementById('t1').value = ("00")  
 }
 
 function nomefunzionet2(event){
   if ((document.getElementById('t1').value >= 0.59 && document.getElementById('t1').value <= 0.99)) {
     alert("Il valore t1 inserito non è corretto")
-    document.getElementById('t1').value = ("0.00")
+    document.getElementById('t1').value = ("00")
        } else if (document.getElementById('t1').value == ("")){
-                  document.getElementById('t2').value = ("0.00") 
-       } else if (document.getElementById('t1').value  == ("0.00")){
-                  document.getElementById('t2').value = ("0.00")
+                  document.getElementById('t2').value = ("00") 
+       } else if (document.getElementById('t1').value  == ("00")){
+                  document.getElementById('t2').value = ("00")
        } else if (document.getElementById('t2').value  == (""))
-                  document.getElementById('t2').value = ("0.00")                                     
+                  document.getElementById('t2').value = ("00")                                     
 }
 
 
 function nomefunzionet3(event){
   if ((document.getElementById('t2').value >= 0.59 && document.getElementById('t2').value <= 0.99)) {
     alert("Il valore t2 inserito non è corretto")
-    document.getElementById('t2').value = ("0.00")
+    document.getElementById('t2').value = ("00")
        } else if (document.getElementById('t2').value == ("")){
-                  document.getElementById('t3').value = ("0.00") 
-       } else if (document.getElementById('t2').value  == ("0.00")){
-                  document.getElementById('t3').value = ("0.00")
+                  document.getElementById('t3').value = ("00") 
+       } else if (document.getElementById('t2').value  == ("00")){
+                  document.getElementById('t3').value = ("00")
        } else if (document.getElementById('t3').value  == (""))
-                  document.getElementById('t3').value = ("0.00")
+                  document.getElementById('t3').value = ("00")
                                              
 }
 
